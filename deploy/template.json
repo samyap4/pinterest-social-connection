@@ -3,8 +3,8 @@
     "icon_url": "https://cdn.cdnlogo.com/logos/r/93/reddit.svg"
   },
   "strategy": "oauth2",
-  "name": "social-connection-integration-test-reddit",
-  "display_name": "Reddit",
+  "name": "social-connection-integration-test-Pinterest",
+  "display_name": "Pinterest",
   "customHeaders": {
     "Authorization": "Basic aXp0V1NSSmZENkFqM2JqMW9VcWZJQTozenY0MEZoU1FDVktoVUpFWGU2cndteUgtZUJDWkE="
   }

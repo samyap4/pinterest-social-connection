@@ -1,10 +1,10 @@
 {
-  "authorizationURL": "https://www.reddit.com/api/v1/authorize",
-  "tokenURL": "https://www.reddit.com/api/v1/access_token",
+  "authorizationURL": "https://www.pinterest.com/oauth",
+  "tokenURL": "https://api.pinterest.com/v5/oauth/token",
   "permissions": [
     {
-      "scope": "identity",
-      "label": "Identity",
+      "scope": "user_accounts:read",
+      "label": "User Accounts",
       "required": true,
       "default": true
     }

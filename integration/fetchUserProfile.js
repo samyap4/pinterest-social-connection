@@ -1,25 +1,25 @@
 /* globals request */
-module.exports = function fetchUserProfile(accessToken, context, cb) {
+module.exports = function(accessToken, ctx, cb) {
   const axios = require("axios@0.22.0");
-  const userInfoEndpoint = "https://oauth.reddit.com/api/v1/me";
-  const headers = { Authorization: `Bearer ${accessToken}` };
+ const userInfoEndpoint = "https://api.pinterest.com/v5/user_account";
+ const headers = { Authorization: `Bearer ${accessToken}` };
 
-  axios
-    .get(userInfoEndpoint, { headers })
-    .then((res) => {
-      if (res.status !== 200) {
-        return cb(new Error(res.data));
-      }
+ axios
+   .get(userInfoEndpoint, { headers })
+   .then((res) => {
+     if (res.status !== 200) {
+       return cb(new Error(res.data));
+     }
 
-      const userData = res.data;
-      console.log(userData);
+     const userData = res.data;
 
-      const profile = {
-        user_id: userData.id,
-        nickname: userData.name,
-      };
+     const profile = {
+       user_id: userData.username,
+       nickname: userData.username,
+       picture: userData.profile_image
+     };
 
-      cb(null, profile);
-    })
-    .catch((err) => cb(err));
-};
+     cb(null, profile);
+   })
+   .catch((err) => cb(err));
+ }

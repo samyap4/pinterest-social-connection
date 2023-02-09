@@ -1,5 +1,5 @@
 
-The Snapchat social connection allows users to log in to your application using their Snapchat profile.
+The Pinterest social connection allows users to log in to your application using their Pinterest profile.
 
 By default, Auth0 automatically syncs user profile data with each user login, thereby ensuring that changes made in the connection source are automatically updated in Auth0. Optionally, you can  [disable user profile data synchronization](https://auth0.com/docs/users/configure-connection-sync-with-auth0)  to allow for updating profile attributes from your application.
   
@@ -10,23 +10,33 @@ By default, Auth0 automatically syncs user profile data with each user login, th
 
 1. An Auth0 account and tenant. [Sign up for free](https://auth0.com/signup).
 
-2. A Reddit account.  Register [here](https://www.reddit.com/register/).
+2. A Pinterest account.  Register [here](https://www.pinterest.com/business/hub/).
 
   
 
-## Set up Reddit
+## Set up Pinterest
 
   
+### 1. Register your app and get your app ID and app secret key
 
+1.  Log into [www.pinterest.com](https://www.pinterest.com/) with the account that you’ll use to manage your apps
+    
+2.  Go to [My Apps](https://developers.pinterest.com/apps/)
+    
+3.  Select Connect app and complete our request form with your app information
+    
+4.  Submit your request to get Trial access
+    
+5.  As soon as we complete the review, you will be notified by email
+    
+6.  Once you have received the email approval, go to My Apps to see your app ID and secret key
+    
 
-### Step 1: Create a Reddit Application
+### 2. Configure the redirect URI required by this code
 
-In order to use the Reddit API, you’ll need to create an application from the developer portal. You can create one by going to [https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps), then clicking the "Are you a developer? Create an app ..." button.
-
-### Step 2: Configure the Application
-
-Here you will name your app and make sure to select `web app` for the type.  You will need to provide a `redirect uri` as well.  This value is the URL of is `https://{your-Auth0-domain}/login/callback`.  If you are using a [Custom Domain](https://auth0.com/docs/customize/custom-domains) then provide this value instead of your Auth0 domain.
-
+1.  Go to [My Apps](https://developers.pinterest.com/apps/)  and select your app.
+    
+2.  Go to “Configure”, and in "Redirect URIs," enter the desired URI. This value is the URI of is `https://{your-Auth0-domain}/login/callback`.  If you are using a [Custom Domain](https://auth0.com/docs/customize/custom-domains) then provide this value instead of your Auth0 domain.
 
 
 That’s all for now. Happy building!
